@@ -13,7 +13,7 @@ const RecipeGenerator = (props) => {
             setLoading(true);
             try {
                 const ai = new GoogleGenAI({
-                    apiKey: import.meta.env.VITE_GEMINI_API_KEY,
+                    apiKey: import.meta.env.VITE_API_KEY,
                 });
                 const prompt = `You are a master chef. Create a creative recipe using these ingredients: ${props.ingred.join(", ")}. 
                 Assume the user has basic staples like salt, water, and oil.`;
