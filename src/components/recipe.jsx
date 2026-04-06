@@ -7,7 +7,6 @@ const RecipeGenerator = (props) => {
         const [recipe, setRecipe] = useState(null);
         const [loading, setLoading] = useState(false);
         const recipeSection = React.createRef(null);
-        console.log(recipeSection);
 
         React.useEffect(() => {
             if (recipe !== null && recipeSection.current !== null) {
