@@ -1,11 +1,19 @@
 import { GoogleGenAI } from "@google/genai"
 import { useState } from "react";
+import React from "react"
 
 
 const RecipeGenerator = (props) => {
         const [recipe, setRecipe] = useState(null);
         const [loading, setLoading] = useState(false);
-        
+        const recipeSection = React.createRef(null);
+        console.log(recipeSection);
+
+        React.useEffect(() => {
+            if (recipe !== null && recipeSection.current !== null) {
+                recipeSection.current.scrollIntoView({ behavior: "smooth" });
+            }
+        }, [recipe]);
         
         
         const generateRecipe = async () => {
@@ -56,7 +64,7 @@ const RecipeGenerator = (props) => {
             };
             return (
                 <div>
-                    {props.ingred.length > 3 && <div className="my-4 mx-8 px-2 py-4 place-items-center rounded-lg bg-gray-100 flex">
+                    {props.ingred.length > 3 && <div className="my-4 mx-8 px-2 py-4 place-items-center rounded-lg bg-gray-100 flex" ref = {recipeSection}>
                         <div className="ml-1.5 w-3/4">
                             <h1 className="font-semibold text-xl">Ready for the recipe?</h1>
                             <p className="text-sm">Generate a recipe from your list of ingredients.</p>

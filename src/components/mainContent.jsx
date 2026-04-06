@@ -20,6 +20,7 @@ export default function MainContent() {
 
 
 
+
     return (
         <main>
 
@@ -45,7 +46,8 @@ export default function MainContent() {
         <Ingredientslist list={list} />
                 
 
-        <RecipeGenerator ingred = {ingredients}/>
+        <RecipeGenerator 
+        ingred = {ingredients}/>
 
         </main>
     )
