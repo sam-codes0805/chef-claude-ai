@@ -18,8 +18,15 @@ A web application that generates recipes based on user-provided ingredients usin
 ## Live Demo
 https://chef-claude-ai-coral.vercel.app?_vercel_share=Svz7c6kUOBysFtpZKIUb5wYfHsnnOkFc
 
-## How to Run
+## ⚠️ Demo Notice
+
+The live demo may not always function as expected due to API rate limits and quota restrictions from the third-party AI service.
+
+For full functionality, you can run the project locally by adding your own API key.
+
+## 🔧 Setup
+
 1. Clone the repository
-2. add your GEMINI-AI Api key to .env file
-4. Run npm install
-5. Run npm start
+2. Create a `.env` file
+3. Add your API key:
+VITE_API_KEY=your_api_key_here
